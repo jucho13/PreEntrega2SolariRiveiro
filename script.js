@@ -13,8 +13,8 @@ class producto
 const fideos = new producto("Fideos", 209);
 const leche = new producto("Leche", 240);
 const yogurt = new producto("Yogurt", 340);
-const tapaDeTarta = new producto("Tapa de Tarta", 190);
-const cocaCola = new producto("Coca Cola", 210);
+const tapaDeTarta = new producto("Tarta", 190);
+const cocaCola = new producto("Coca", 210);
 const papasFritas = new producto("Papas Fritas", 170);
 const mani = new producto("Mani", 90);
 const pan = new producto("Pan", 200);
@@ -31,7 +31,7 @@ let subTotal;
 let total=0;
 while (sigue=="si")
 {
-    let productoComprado=prompt("¿Que producto le gustaria comprar?");
+    let productoComprado=prompt("¿Que producto le gustaria comprar (por favor poner primer letra mayúscula?");
     let cantidadProducto=parseInt(prompt("¿Cuantos les gustaria comprar?"));
     for(i=0;i<8;i++)
     {
