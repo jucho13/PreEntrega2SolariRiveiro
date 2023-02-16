@@ -27,16 +27,23 @@ for(i=0;i<8;i++)
     alert(`${productos[i].nombre} tiene un valor de ${productos[i].precio}`);
 }
 let sigue="si";
+let subTotal;
+let total=0;
 while (sigue=="si")
 {
     let productoComprado=prompt("¿Que producto le gustaria comprar?");
     let cantidadProducto=parseInt(prompt("¿Cuantos les gustaria comprar?"));
-    if(productoComprado==productos.nombre)
+    for(i=0;i<8;i++)
     {
-        let subTotal=(productos.sumaIva()*cantidadProducto);
+        if(productoComprado==productos[i].nombre)
+        {
+            subTotal=(productos[i].sumaIva()*cantidadProducto);
+        }
     }
-    let total=total+subTotal;
+    console.log(subTotal);
+    total=total+subTotal;
+
     sigue=prompt("¿Le gustaria seguir comprando?");
 }
-
+console.log(total);
 alert(`El total de su compra es ${total} pesos, ¡Gracias por su compra!`);
