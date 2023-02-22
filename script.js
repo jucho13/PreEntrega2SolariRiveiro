@@ -22,14 +22,23 @@ const pan = new producto("Pan", 200);
 let productos=[fideos,leche,yogurt,tapaDeTarta,cocaCola,papasFritas,mani,pan];
 alert("Buenas, bienvenido a mi simulador virtual de Despensa");
 alert("Nuestros precios sin iva son los siguientes:");
-for(i=0;i<8;i++)
-{
-    alert(`${productos[i].nombre} tiene un valor de ${productos[i].precio}`);
-}
+const arrayProductosMenos200 = productos.filter(producto=> producto.precio < 200);
+const arrayProductosMas200 = productos.filter(producto=> producto.precio > 200);
+alert("Productos que tienen un valor inferior a $200");
+arrayProductosMenos200.forEach((producto)=> 
+{                                      
+    alert(`${producto.nombre}`);
+})
+alert("Productos que tienen un valor superior a $200");
+arrayProductosMas200.forEach((producto)=> 
+{                                      
+    alert(`${producto.nombre}`);
+})
+
 let sigue="si";
 let subTotal;
 let total=0;
-while (sigue=="si")
+while (sigue=="si"|| sigue=="Si")
 {
     let productoComprado=prompt("¿Que producto le gustaria comprar (por favor poner primer letra mayúscula?");
     let cantidadProducto=parseInt(prompt("¿Cuantos les gustaria comprar?"));
@@ -46,4 +55,4 @@ while (sigue=="si")
     sigue=prompt("¿Le gustaria seguir comprando?");
 }
 console.log(total);
-alert(`El total de su compra es ${total} pesos, ¡Gracias por su compra!`);
+alert(`El total de su compra (es ${total} pesos, ¡Gracias por su compra!`); 
