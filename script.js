@@ -55,4 +55,8 @@ while (sigue=="si"|| sigue=="Si")
     sigue=prompt("¿Le gustaria seguir comprando?");
 }
 console.log(total);
-alert(`El total de su compra es ${total} pesos, ¡Gracias por su compra!`); 
+function TotalCompra(total){
+    alert(`El total de su compra es ${total} pesos, ¡Gracias por su compra!`);
+}
+TotalCompra(total);
+ 
